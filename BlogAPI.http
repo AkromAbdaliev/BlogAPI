@@ -1,0 +1,43 @@
+@BlogAPI_HostAddress = http://localhost:5278
+
+### Get All Blog Posts
+GET {{BlogAPI_HostAddress}}/api/posts
+Accept: application/json
+
+###
+
+### Get Blog Post by ID
+GET {{BlogAPI_HostAddress}}/api/posts/05d78978-d86c-48af-98ae-0f5e2d9fdb5f
+Accept: application/json
+
+###
+
+### Create a New Blog Post
+POST {{BlogAPI_HostAddress}}/api/posts
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Understanding Model Binding in ASP.NET Core",
+  "content": "Model Binding is an important feature in ASP.NET Core for mapping request data to controller action parameters...",
+  "authorId": 1
+}
+
+###
+
+### Update an Existing Blog Post
+PUT {{BlogAPI_HostAddress}}/api/posts/05d78978-d86c-48af-98ae-0f5e2d9fdb5f
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Introduction to ASP.NET Core (Updated)",
+  "content": "This blog post now includes updates on the latest features of ASP.NET Core...",
+  "authorId": 1
+}
+
+###
+
+### Delete a Blog Post
+DELETE {{BlogAPI_HostAddress}}/api/posts/0b22f218-7b2d-4028-8fa0-7f8d729288df
+Accept: application/json
